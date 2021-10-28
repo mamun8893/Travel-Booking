@@ -1,0 +1,24 @@
+.navbar-warper .nav-link {
+  color: #9ca3a9 !important;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+  padding: 0px 20px !important;
+  transition: all 0.5s;
+}
+.navbar-brand {
+  font-size: 40px;
+  font-weight: 700;
+  font-family: "Barlow Condensed", sans-serif;
+  color: #ff7f47 !important;
+}
+
+.navbar-warper .nav-link:hover {
+  color: #ff7f47 !important;
+}
+
+.navbar-warper .navbar-collapse {
+  justify-content: end;
+  color: 082740;
+}
