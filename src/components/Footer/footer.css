@@ -1,0 +1,104 @@
+.footer-area {
+  background-color: #262339;
+  padding: 80px 0px 30px 0px;
+}
+.footer-top-area {
+  padding-bottom: 40px;
+}
+.footer-link h4 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.footer-link ul {
+  padding: 0px;
+  margin: 0;
+}
+.footer-link ul li {
+  list-style-type: none;
+  margin-bottom: 10px;
+  color: #fff;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 18px;
+}
+
+.footer-link ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s;
+}
+.footer-link p {
+  font-family: "Barlow Condensed", sans-serif;
+  color: #fff;
+  font-size: 22px;
+}
+.footer-link ul li a:hover {
+  color: #ff7f47;
+}
+
+.footer-copyright {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid #423f54;
+}
+.footer-copyright p {
+  color: #fff;
+  margin: 0;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 18px;
+}
+.payment-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+.payment-cards img {
+  margin-right: 13px;
+  margin-bottom: 15px;
+}
+.contact-box {
+  display: flex;
+  margin-top: 25px;
+}
+.contact-box span {
+  float: left;
+  width: 34px;
+  font-size: 18px;
+  color: #ff7f47;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.contact-box span svg {
+  color: #ff7f47;
+  font-size: 20px;
+}
+.contact-box span svg path {
+  stroke: #ff7f47;
+}
+.contact-box a {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #fff;
+  line-height: 22px;
+  display: block;
+  font-weight: 500;
+  text-decoration: none;
+  font-family: "Barlow Condensed", sans-serif;
+}
+/**Responsive**/
+
+@media only screen and (max-width: 767.98px) {
+  .footer-link {
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 575.98px) {
+  .footer-link {
+    text-align: center;
+  }
+}

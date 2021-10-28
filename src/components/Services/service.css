@@ -49,4 +49,10 @@
   color: #9ca3a9;
   font-family: "Barlow Condensed", sans-serif;
   margin-right: 40px;
+  display: flex;
+  align-items: center;
+}
+.tour-package-item .content li svg {
+  margin-right: 5px;
+  color: #ff7f47;
 }

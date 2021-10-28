@@ -5,7 +5,9 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   onAuthStateChanged,
+  signOut,
 } from "firebase/auth";
+import swal from "sweetalert";
 initializeAuth();
 
 const useFirebase = () => {
@@ -22,11 +24,23 @@ const useFirebase = () => {
       .then((result) => {
         const user = result.user;
         setUser(user);
+        swal("Good job!", "Successfully Login", "success");
       })
       .catch((error) => {
-        console.log(error.message);
+        swal("Something went wrong!", `${error.message}`, "error");
       })
       .finally(() => setIsloading(false));
+  };
+
+  const handleSignout = () => {
+    signOut(auth)
+      .then(() => {
+        setUser({});
+        swal("Good job!", "Successfully Logout", "success");
+      })
+      .catch((error) => {
+        swal("Something went wrong!", `${error.message}`, "error");
+      });
   };
 
   useEffect(() => {
@@ -40,7 +54,7 @@ const useFirebase = () => {
     });
   }, []);
 
-  return { handleGoogleSignin, user, isLoading };
+  return { handleGoogleSignin, user, isLoading, handleSignout };
 };
 
 export default useFirebase;

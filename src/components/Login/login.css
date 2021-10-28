@@ -1,0 +1,50 @@
+.login-area {
+  padding-top: 44px;
+  padding-bottom: 80px;
+  border-top: 1px solid rgb(236, 238, 239);
+}
+.login-area .m-card {
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(236, 238, 239);
+  background-color: rgb(255, 255, 255);
+  padding: 50px;
+}
+.login-logo h2 {
+  text-align: center;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.login-logo img {
+  width: 202px;
+}
+.login-content h2 {
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 700;
+  color: #ff7f47;
+  font-family: "Barlow Condensed", sans-serif;
+  margin-bottom: 32px;
+  text-align: center;
+}
+.google-signin {
+  background: #ffffff;
+  border: 1px solid #c7c7c7;
+  box-sizing: border-box;
+  border-radius: 57px;
+  height: 50px;
+  line-height: 50px;
+  width: 100%;
+  padding: 0;
+  font-size: 20px;
+  font-family: "Barlow Condensed", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.google-signin img {
+  margin-right: 15px;
+}

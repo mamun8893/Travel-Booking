@@ -1,10 +1,10 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyDN5K6BLCXfgpULDJ1agzm5gRl5mTy4EeM",
-  authDomain: "volunteer-network-75745.firebaseapp.com",
-  projectId: "volunteer-network-75745",
-  storageBucket: "volunteer-network-75745.appspot.com",
-  messagingSenderId: "81418561971",
-  appId: "1:81418561971:web:5edcabf6ff46b2c02103c6",
+  apiKey: "AIzaSyCWGr4vF_wMkVvJddp_2i54w2HFBC8PsIc",
+  authDomain: "trip-world-2e3ee.firebaseapp.com",
+  projectId: "trip-world-2e3ee",
+  storageBucket: "trip-world-2e3ee.appspot.com",
+  messagingSenderId: "773851194560",
+  appId: "1:773851194560:web:3cf536291d56a257007925",
 };
 
 export default firebaseConfig;
