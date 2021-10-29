@@ -7,7 +7,7 @@ import swal from "sweetalert";
 const AddPackage = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/add-service", {
+    fetch("https://blooming-ridge-64554.herokuapp.com/add-service", {
       method: "POST",
       headers: {
         "content-type": "application/json",

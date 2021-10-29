@@ -18,7 +18,8 @@ const PackageDetails = () => {
   //Book Package
   const onSubmit = (data) => {
     data.package_title = packageDetails.title;
-    fetch("http://localhost:5000/book-package", {
+    data.status = false;
+    fetch("https://blooming-ridge-64554.herokuapp.com/book-package", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -38,7 +39,7 @@ const PackageDetails = () => {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:5000/package/${id}`)
+    fetch(`https://blooming-ridge-64554.herokuapp.com/package/${id}`)
       .then((res) => res.json())
       .then((data) => setPackageDetails(data));
   }, []);

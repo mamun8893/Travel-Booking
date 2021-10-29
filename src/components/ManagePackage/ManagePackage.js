@@ -1,22 +1,20 @@
-import React, { useEffect } from "react";
-import "./my-booking.css";
-import { Badge, Col, Container, Row, Table } from "react-bootstrap";
-import { AiOutlineDelete } from "react-icons/ai";
-import useAuth from "../../hooks/UseAuth";
+import React from "react";
 import { useState } from "react";
+import { useEffect } from "react";
+import { Container, Row, Col, Table, Badge } from "react-bootstrap";
+import { AiOutlineDelete } from "react-icons/ai";
 import swal from "sweetalert";
 
-const MyBooking = () => {
-  const [myBooking, setMyBooking] = useState([]);
+const ManagePackage = () => {
+  const [managePackage, setManagePackage] = useState([]);
   const [updateBooking, setUpdateBooking] = useState(false);
-  const { user } = useAuth();
-  const email = user.email;
-
   useEffect(() => {
-    fetch(`https://blooming-ridge-64554.herokuapp.com/myOrders/${email}`)
+    fetch("https://blooming-ridge-64554.herokuapp.com/manage-package")
       .then((res) => res.json())
-      .then((data) => setMyBooking(data));
+      .then((data) => setManagePackage(data));
   }, [updateBooking]);
+
+  // const managePackageItem=managePackage.filter(item=>item._id)
 
   const handleDelete = (id) => {
     swal({
@@ -43,6 +41,23 @@ const MyBooking = () => {
     });
   };
 
+  const handleUpdateStatus = (id) => {
+    const url = `https://blooming-ridge-64554.herokuapp.com/manage-package/${id}`;
+    fetch(url, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(managePackage),
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        if (result.modifiedCount > 0) {
+          setUpdateBooking(true);
+        }
+      });
+  };
+
   return (
     <div className="my-order p-80">
       <Container>
@@ -50,20 +65,24 @@ const MyBooking = () => {
           <Col md={10}>
             <div className="may-order-warper">
               <div className="heading text-center">
-                <h2>My Booking</h2>
+                <h2>Manage Package</h2>
               </div>
               <Table striped borderless>
                 <thead>
                   <tr>
+                    <th>Name</th>
+                    <th>Email</th>
                     <th>Package Name</th>
                     <th>Status</th>
                     <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {myBooking.map((item) => {
+                  {managePackage.map((item) => {
                     return (
                       <tr key={item._id}>
+                        <td>{item.name}</td>
+                        <td>{item.email}</td>
                         <td>{item.package_title}</td>
                         <td>
                           {item.status ? (
@@ -80,6 +99,9 @@ const MyBooking = () => {
                           <button onClick={() => handleDelete(item._id)}>
                             <AiOutlineDelete />
                           </button>
+                          <button onClick={() => handleUpdateStatus(item._id)}>
+                            Approve
+                          </button>
                         </td>
                       </tr>
                     );
@@ -94,4 +116,4 @@ const MyBooking = () => {
   );
 };
 
-export default MyBooking;
+export default ManagePackage;

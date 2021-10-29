@@ -1,0 +1,11 @@
+.content-image h1 {
+  font-size: 80px;
+  font-weight: 700;
+  font-family: "Barlow Condensed", sans-serif;
+  margin-bottom: 40px;
+}
+.content-image h2 {
+  font-weight: 700;
+  font-family: "Barlow Condensed", sans-serif;
+  margin: 20px 0px;
+}

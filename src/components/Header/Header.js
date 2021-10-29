@@ -9,7 +9,9 @@ const Header = () => {
   return (
     <Navbar className="navbar-warper" collapseOnSelect expand="lg">
       <Container>
-        <Navbar.Brand href="#home">TRIP-WORLD</Navbar.Brand>
+        <Navbar.Brand>
+          <NavLink to="/home">TRIP-WORLD</NavLink>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ml-auto m-navbar">
@@ -24,8 +26,8 @@ const Header = () => {
             )}
 
             {user.email && (
-              <Nav.Link as={NavLink} to="/manage-order">
-                Manage All Orders
+              <Nav.Link as={NavLink} to="/manage-package">
+                Manage All Package
               </Nav.Link>
             )}
 

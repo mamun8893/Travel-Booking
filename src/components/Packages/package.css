@@ -57,3 +57,8 @@
   margin-right: 5px;
   color: #ff7f47;
 }
+.service-detail-loader {
+  margin: auto;
+  display: block;
+  margin-top: 40px;
+}
