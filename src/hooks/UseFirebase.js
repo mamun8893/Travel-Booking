@@ -18,13 +18,15 @@ const useFirebase = () => {
 
   //Google signin
 
-  const handleGoogleSignin = () => {
+  const handleGoogleSignin = (navigate) => {
     setIsloading(true);
     signInWithPopup(auth, googleProvider)
       .then((result) => {
         const user = result.user;
         setUser(user);
-        swal("Good job!", "Successfully Login", "success");
+        swal("Good job!", "Successfully Login", "success").then(() => {
+          navigate();
+        });
       })
       .catch((error) => {
         swal("Something went wrong!", `${error.message}`, "error");

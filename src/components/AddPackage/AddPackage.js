@@ -1,10 +1,10 @@
 import React from "react";
-import "./add-service.css";
+import "./add-package.css";
 import { Row, Card, Col, Container } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import swal from "sweetalert";
 
-const AddService = () => {
+const AddPackage = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     fetch("http://localhost:5000/add-service", {
@@ -18,8 +18,11 @@ const AddService = () => {
       .then((result) => {
         if (result.acknowledged) {
           reset();
-          swal("Good job!", "Add Service Successfully", "success");
+          swal("Good job!", "Add Package Successfully", "success");
         }
+      })
+      .catch((error) => {
+        swal("Something went wrong!", `${error}`, "error");
       });
   };
   return (
@@ -38,16 +41,23 @@ const AddService = () => {
                 <input
                   type="text"
                   className="form-control"
-                  {...register("description")}
-                  placeholder="Enter Description"
+                  {...register("thumb_image")}
+                  placeholder="Enter Thumbnil Image URL"
                 />
                 <input
                   type="text"
                   className="form-control"
-                  {...register("image")}
-                  placeholder="Enter Image URL"
+                  {...register("details_image")}
+                  placeholder="Enter Details Image URL"
                 />
-                <input type="submit" value="Add Service" className="main-btn" />
+                <textarea
+                  type="text"
+                  className="form-control"
+                  rows={3}
+                  {...register("description")}
+                  placeholder="Enter Description"
+                />
+                <input type="submit" value="Add Package" className="main-btn" />
               </form>
             </Card>
           </Col>
@@ -57,4 +67,4 @@ const AddService = () => {
   );
 };
 
-export default AddService;
+export default AddPackage;

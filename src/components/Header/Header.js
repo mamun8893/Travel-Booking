@@ -16,15 +16,24 @@ const Header = () => {
             <Nav.Link as={NavLink} to="/home">
               Home
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/my-order">
-              My Orders
-            </Nav.Link>
-            <Nav.Link as={NavLink} to="/manage-order">
-              Manage All Orders
-            </Nav.Link>
-            <Nav.Link as={NavLink} to="add-service">
-              Add A New Service
-            </Nav.Link>
+
+            {user.email && (
+              <Nav.Link as={NavLink} to="/my-booking">
+                My Booking
+              </Nav.Link>
+            )}
+
+            {user.email && (
+              <Nav.Link as={NavLink} to="/manage-order">
+                Manage All Orders
+              </Nav.Link>
+            )}
+
+            {user.email && (
+              <Nav.Link as={NavLink} to="/add-package">
+                Add Tour Package
+              </Nav.Link>
+            )}
 
             {user.email ? (
               <Nav.Link onClick={handleSignout}>Logout</Nav.Link>
