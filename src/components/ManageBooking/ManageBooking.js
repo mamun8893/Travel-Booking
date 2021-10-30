@@ -5,17 +5,15 @@ import { Container, Row, Col, Table, Badge } from "react-bootstrap";
 import { AiOutlineDelete } from "react-icons/ai";
 import swal from "sweetalert";
 
-const ManagePackage = () => {
-  const [managePackage, setManagePackage] = useState([]);
+const ManageBooking = () => {
+  const [manageBooking, setManageBooking] = useState([]);
   const [updateBooking, setUpdateBooking] = useState(false);
   let statusBtnRef = useRef();
   useEffect(() => {
-    fetch("https://blooming-ridge-64554.herokuapp.com/manage-package")
+    fetch("https://blooming-ridge-64554.herokuapp.com/manage-booking")
       .then((res) => res.json())
-      .then((data) => setManagePackage(data));
+      .then((data) => setManageBooking(data));
   }, [updateBooking]);
-
-  // const managePackageItem=managePackage.filter(item=>item._id)
 
   const handleDelete = (id) => {
     swal({
@@ -43,13 +41,13 @@ const ManagePackage = () => {
   };
 
   const handleUpdateStatus = (id) => {
-    const url = `https://blooming-ridge-64554.herokuapp.com/manage-package/${id}`;
+    const url = `https://blooming-ridge-64554.herokuapp.com/manage-booking/${id}`;
     fetch(url, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(managePackage),
+      body: JSON.stringify(manageBooking),
     })
       .then((res) => res.json())
       .then((result) => {
@@ -69,7 +67,7 @@ const ManagePackage = () => {
           <Col md={10}>
             <div className="may-order-warper">
               <div className="heading text-center">
-                <h2>Manage Package</h2>
+                <h2>Manage Booking</h2>
               </div>
               <Table striped borderless responsive>
                 <thead>
@@ -82,7 +80,7 @@ const ManagePackage = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {managePackage.map((item) => {
+                  {manageBooking.map((item) => {
                     return (
                       <tr key={item._id}>
                         <td>{item.name}</td>
@@ -124,4 +122,4 @@ const ManagePackage = () => {
   );
 };
 
-export default ManagePackage;
+export default ManageBooking;

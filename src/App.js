@@ -6,7 +6,7 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import Login from "./components/Login/Login";
-import ManagePackage from "./components/ManagePackage/ManagePackage";
+import ManageBooking from "./components/ManageBooking/ManageBooking";
 import MyBooking from "./components/MyBooking/MyBooking";
 import PackageDetails from "./components/PackageDetails/PackageDetails";
 import NotFound from "./components/NotFound/NotFound";
@@ -32,8 +32,8 @@ function App() {
             <PrivateRoute path="/my-booking">
               <MyBooking></MyBooking>
             </PrivateRoute>
-            <PrivateRoute path="/manage-package">
-              <ManagePackage></ManagePackage>
+            <PrivateRoute path="/manage-booking">
+              <ManageBooking></ManageBooking>
             </PrivateRoute>
             <PrivateRoute path="/add-package">
               <AddPackage></AddPackage>

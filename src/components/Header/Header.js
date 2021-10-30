@@ -26,8 +26,8 @@ const Header = () => {
             )}
 
             {user.email && (
-              <Nav.Link as={NavLink} to="/manage-package">
-                Manage All Package
+              <Nav.Link as={NavLink} to="/manage-booking">
+                Manage All Booking
               </Nav.Link>
             )}
 
