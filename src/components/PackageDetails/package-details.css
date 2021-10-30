@@ -74,7 +74,7 @@
   padding: 30px 25px;
   background: #fff;
   box-shadow: 0 0 64px rgb(17 17 17 / 10%);
-  border-radius: 10 px;
+  border-radius: 10px;
 }
 .package-details-form h2 {
   font-family: "Barlow Condensed", sans-serif;
@@ -97,4 +97,18 @@ textarea {
 }
 .package-details-form .main-btn {
   width: 100%;
+}
+
+/**responsive**/
+
+@media only screen and (max-width: 991.98px) {
+  .package-details-form {
+    margin-top: 40px;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .breadcumb-area {
+    padding: 80px 0px;
+  }
 }

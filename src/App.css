@@ -22,3 +22,23 @@
   font-weight: 600;
   font-family: "Barlow Condensed", sans-serif;
 }
+
+/**Responsive**/
+
+@media only screen and (max-width: 767.98px) {
+  .p-80 {
+    padding: 60px 0px;
+  }
+  .heading h2 {
+    font-size: 38px;
+  }
+  .heading p {
+    margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width: 575.98px) {
+  .heading h2 {
+    font-size: 34px;
+  }
+}

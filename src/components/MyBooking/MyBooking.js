@@ -52,7 +52,7 @@ const MyBooking = () => {
               <div className="heading text-center">
                 <h2>My Booking</h2>
               </div>
-              <Table striped borderless>
+              <Table striped borderless responsive>
                 <thead>
                   <tr>
                     <th>Package Name</th>

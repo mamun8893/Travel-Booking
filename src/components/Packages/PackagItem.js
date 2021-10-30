@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const PackagItem = (props) => {
   const { _id, title, thumb_image, description } = props.packageData;
   return (
-    <Col md={4}>
+    <Col lg={4} md={6} sm={6}>
       <div className="tour-package-item">
         <div className="image">
           <img src={thumb_image} className="img-fluid" alt="package" />

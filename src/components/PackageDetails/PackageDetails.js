@@ -68,7 +68,7 @@ const PackageDetails = () => {
       <Container>
         <div className="package-details-warper p-80">
           <Row>
-            <Col md={8}>
+            <Col lg={8}>
               <div className="package-details">
                 <div className="details-image">
                   <img
@@ -83,7 +83,7 @@ const PackageDetails = () => {
                 </div>
               </div>
             </Col>
-            <Col md={4}>
+            <Col lg={4}>
               <div className="package-details-form">
                 <h2>Book This Package</h2>
                 <form onSubmit={handleSubmit(onSubmit)}>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useState } from "react";
 import { useEffect } from "react";
 import { Container, Row, Col, Table, Badge } from "react-bootstrap";
@@ -8,6 +8,7 @@ import swal from "sweetalert";
 const ManagePackage = () => {
   const [managePackage, setManagePackage] = useState([]);
   const [updateBooking, setUpdateBooking] = useState(false);
+  let statusBtnRef = useRef();
   useEffect(() => {
     fetch("https://blooming-ridge-64554.herokuapp.com/manage-package")
       .then((res) => res.json())
@@ -54,6 +55,9 @@ const ManagePackage = () => {
       .then((result) => {
         if (result.modifiedCount > 0) {
           setUpdateBooking(true);
+          if (statusBtnRef.current) {
+            statusBtnRef.current.setAttribute("disabled", "disabled");
+          }
         }
       });
   };
@@ -67,7 +71,7 @@ const ManagePackage = () => {
               <div className="heading text-center">
                 <h2>Manage Package</h2>
               </div>
-              <Table striped borderless>
+              <Table striped borderless responsive>
                 <thead>
                   <tr>
                     <th>Name</th>
@@ -99,7 +103,11 @@ const ManagePackage = () => {
                           <button onClick={() => handleDelete(item._id)}>
                             <AiOutlineDelete />
                           </button>
-                          <button onClick={() => handleUpdateStatus(item._id)}>
+                          <button
+                            disabled={item.status}
+                            ref={statusBtnRef}
+                            onClick={() => handleUpdateStatus(item._id)}
+                          >
                             Approve
                           </button>
                         </td>

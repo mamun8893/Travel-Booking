@@ -48,3 +48,14 @@
 .google-signin img {
   margin-right: 15px;
 }
+
+/**Responsive**/
+
+@media only screen and (max-width: 575.98px) {
+  .login-area .m-card {
+    padding: 30px;
+  }
+  .login-content h2 {
+    margin-bottom: 20px;
+  }
+}

@@ -18,28 +18,28 @@ const Achivement = () => {
         </div>
         <Row>
           {/* Item 1 */}
-          <Col md={3}>
+          <Col md={3} sm={6} xs={6}>
             <div className="achievment-item text-center">
               <GrUser />
               <h4>2000+ Our worldwide guide</h4>
             </div>
           </Col>
           {/* Item 2 */}
-          <Col md={3}>
+          <Col md={3} sm={6} xs={6}>
             <div className="achievment-item text-center">
               <GiShakingHands />
               <h4>100% trusted travel agency</h4>
             </div>
           </Col>
           {/* Item 3 */}
-          <Col md={3}>
+          <Col md={3} sm={6} xs={6}>
             <div className="achievment-item text-center">
               <GrUserExpert />
               <h4>10+ year of travel experience</h4>
             </div>
           </Col>
           {/* Item 4 */}
-          <Col md={3}>
+          <Col md={3} sm={6} xs={6}>
             <div className="achievment-item text-center">
               <GrUser />
               <h4>90% of our traveller happy</h4>

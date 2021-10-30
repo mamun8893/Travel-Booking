@@ -11,7 +11,7 @@ const Banner = () => {
     >
       <Container>
         <Row className="justify-content-center">
-          <Col md={8}>
+          <Col lg={8}>
             <div className="banner-content text-center">
               <h1>Enjoy the tour with Trip-World</h1>
               <p>

@@ -22,3 +22,10 @@
 .may-order-warper button svg {
   color: #fff;
 }
+
+.may-order-warper tr th {
+  white-space: nowrap;
+}
+.may-order-warper tr td {
+  white-space: nowrap;
+}

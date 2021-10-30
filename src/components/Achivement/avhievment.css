@@ -26,3 +26,26 @@
 .achievment-item path {
   stroke: #fff;
 }
+
+/**Responsive**/
+@media only screen and (max-width: 991.98px) {
+  .achievment-item {
+    padding: 8px;
+  }
+  .achievment-item svg {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .achievment-item {
+    margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .achievment-item svg {
+    font-size: 38px;
+    margin-bottom: 15px;
+  }
+}

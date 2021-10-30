@@ -9,8 +9,8 @@ const Footer = () => {
       <Container>
         <div className="footer-top-area">
           <Row>
-            <Col md={4} sm={6}>
-              <div className="footer-link">
+            <Col md={4}>
+              <div className="footer-link footer-left">
                 <h4>Trip-World</h4>
                 <p>
                   We aim to ensure that you never miss an opportunity to travel.
@@ -19,7 +19,7 @@ const Footer = () => {
             </Col>
             <Col md={8}>
               <Row>
-                <Col md={5} sm={6}>
+                <Col md={5} sm={5}>
                   <div className="footer-link">
                     <h4>Contact Us</h4>
                     <div className="contact-box">
@@ -54,7 +54,7 @@ const Footer = () => {
                     </div>
                   </div>
                 </Col>
-                <Col md={3} sm={6}>
+                <Col md={3} sm={4}>
                   <div className="footer-link">
                     <h4>Support</h4>
                     <ul>
@@ -76,7 +76,7 @@ const Footer = () => {
                     </ul>
                   </div>
                 </Col>
-                <Col md={4} sm={6}>
+                <Col md={4} sm={3}>
                   <div className="footer-link">
                     <h4>We Accept</h4>
                     <div className="payment-cards">

@@ -62,3 +62,22 @@
   display: block;
   margin-top: 40px;
 }
+
+/**Responsive**/
+
+@media only screen and (max-width: 575.98px) {
+  .tour-package-item .image img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 991.98px) {
+  .tour-package-item .content li {
+    margin-right: 20px;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .blog-item .image img {
+    width: 100%;
+  }
+}
