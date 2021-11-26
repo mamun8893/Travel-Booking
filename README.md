@@ -4,9 +4,9 @@ It is a single page application made with ReactJS, React Bootstrap,Route, Fireba
 
 #### Project Featured:
 
-- It is a Tour website you can buy Tour Package
-- I Have used Firebase Authentication
-- I Have used Private Route
+- Service website admin add tour package
+- User can booking tour package
+- Admin manage all booking
 - Store data in mongodb
 - I Have used Hooks
 - I Have Used Context Api
